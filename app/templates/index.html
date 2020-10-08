@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html style="color: rgb(52,52,52);">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Movies app</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/Login-Form-Dark.css') }}">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono&amp;subset=latin-ext">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+
+<body style="background: rgb(58,58,58);">
+    <div class="login-dark" style="background: #1e2833;filter: brightness(107%) grayscale(0%) hue-rotate(0deg) saturate(200%) sepia(0%);font-family: 'Cutive Mono', monospace;">
+        <div class="justify-content-center align-content-center" style="width: 320px;height: 113px;top: 25%;left: 50%;position: absolute;transform: translate(-50%, -25%);box-shadow: 3px 3px 4px rgba(0,0,0,0.2);filter: brightness(77%);">
+            <header class="align-items-center" id="movies-app-title" style="height: 100%;">
+                <h1 class="text-center d-flex justify-content-center align-content-center align-items-xl-center" style="color: #d5a600;text-align: center;height: 100%;">Movies app</h1>
+            </header>
+        </div>
+        <form id="login-or-register-form" method="post" style="background: #1e2833;">
+            <div class="form-group"><input class="form-control" type="email" id="email-input" name="email" placeholder="Email" style="background: #301e33;filter: brightness(77%);border-radius: 3px;"></div>
+            <div class="form-group"><input class="form-control" type="password" id="password-input" name="password" placeholder="Password" style="filter: brightness(77%);background: #301e33;border-width: 0px;border-bottom-width: 0px;border-radius: 3px;"></div>
+            <div class="form-group d-flex flex-row justify-content-center align-items-center align-content-center"
+                style="border-width: 1px;"><button class="btn btn-primary btn-block text-center float-none d-xl-flex justify-content-center align-items-xl-center" id="register" type="submit" style="background: #301e33;filter: brightness(77%);color: #d5a600;border-width: 0px;border-style: solid;margin: 2px;height: 38px;text-align: left;"
+                    name="register">Register</button><button class="btn btn-primary btn-block text-center float-none d-xl-flex justify-content-center align-items-xl-center" id="login" type="submit" style="background: #301e33;filter: brightness(77%);color: #d5a600;border-width: 0px;border-style: none;margin: 2px;height: 38px;text-align: left;"
+                    name="login">Log In</button></div><a class="text-center d-xl-flex justify-content-xl-center align-items-xl-center forgot" href="#" style="font-size: 14px;background: #301e33;filter: brightness(77%);height: 38px;text-align: center;opacity: 1;">I am forgetful...</a></form>
+    </div>
+     <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+     <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+
+</body>
+
+</html>
