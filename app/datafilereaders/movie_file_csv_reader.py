@@ -4,6 +4,7 @@ from app.domainmodel.genre import Genre
 from app.domainmodel.actor import Actor
 from app.domainmodel.director import Director
 
+
 class MovieFileCSVReader:
     dataset_of_movies: list
     dataset_of_actors: set

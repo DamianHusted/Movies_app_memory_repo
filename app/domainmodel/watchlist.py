@@ -2,7 +2,7 @@ from domainmodel.movie import Movie
 from datetime import *
 
 
-class WatchList:
+class Watchlist:
     __watchlist: list
     __size: int
     __watchlist_id: int
@@ -22,7 +22,7 @@ class WatchList:
 
     @watchlist.setter
     def watchlist(self, new_watchlist):
-        if isinstance(new_watchlist, WatchList):
+        if isinstance(new_watchlist, Watchlist):
             if self.__watchlist is not None or len(self.__watchlist) == 0:
                 change_time = datetime.now().strftime("%d/%m%/Y at %H:%M:%S")
 
@@ -132,14 +132,14 @@ class WatchList:
         return len(self.__watchlist)
 
 
-# watchlist = WatchList()
+# watchlist = Watchlist()
 # print(f"Size of watchlist: {watchlist.size()}")
 # watchlist.add_movie(Movie("Moana", 2016))
 # watchlist.add_movie(Movie("Ice Age", 2002))
 # watchlist.add_movie(Movie("Guardians of the Galaxy", 2012))
 # print(watchlist.first_movie_in_watchlist())
 
-# watchlist1 = WatchList()
+# watchlist1 = Watchlist()
 # watchlist1.add_movie(Movie("Xanax diaries", 2016))
 # watchlist1.add_movie(Movie("Molly's party", 2002))
 # watchlist1.add_movie(Movie("Guardians of the Ganja", 2012))
@@ -150,20 +150,20 @@ class WatchList:
 # print(watchlist1.first_movie_in_watchlist())
 # print(watchlist1.select_movie_to_watch(3))
 
-# watchlist2 = WatchList()
+# watchlist2 = Watchlist()
 # print(f"Size of watchlist: {watchlist2.size()}")
 # watchlist2.add_movie(Movie("James Bond", 1998))
 # watchlist2.add_movie(Movie("James Bond", 1998))
 # print(f"Size of watchlist: {watchlist2.size()}")
 # print(watchlist2.first_movie_in_watchlist())
 #
-# watchlist3 = WatchList()
+# watchlist3 = Watchlist()
 # watchlist3.add_movie(Movie("James Bond", 1998))
 # print(watchlist3.first_movie_in_watchlist())
 # print(watchlist3.select_movie_to_watch(20))
 
 #
-watchlist4 = WatchList()
+watchlist4 = Watchlist()
 watchlist4.add_movie(Movie("You me and Dupree", 1900))
 print(watchlist4.first_movie_in_watchlist())
 watchlist4.add_movie(Movie("Mad Max", 1989))
@@ -182,7 +182,7 @@ watchlist4.add_movie(Movie("The Mask", 1996))
 #
 #
 #
-# watchlist5 = WatchList(12)
+# watchlist5 = Watchlist(12)
 # print(watchlist5.watchlist)
 
 for item in watchlist4:

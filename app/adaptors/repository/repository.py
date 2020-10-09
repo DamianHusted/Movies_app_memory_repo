@@ -1,9 +1,14 @@
 import abc
 from datetime import date
 from app.domainmodel import *
-from app.domainmodel.genre import Genre
-from app.domainmodel.user import User
+from app.domainmodel.actor import Actor
 from app.domainmodel.movie import Movie
+from app.domainmodel.director import Director
+from app.domainmodel.genre import Genre
+from app.domainmodel.review import Review
+from app.domainmodel.user import User
+from app.domainmodel.watchlist import Watchlist
+
 
 repo_instance = None
 
@@ -31,11 +36,57 @@ class AbstractRepository(abc.ABC):
 
     @abc.abstractmethod
     def get_movie(self, movie) -> Movie:
-        """Returns Movie"""
+        """Returns Watchlist"""
+        raise NotImplementedError
+
+    @abc.abstractmethod
+    def add_actor(self, actor: Actor):
+        """Adds a actor to the repository"""
+        raise NotImplementedError
+
+    @abc.abstractmethod
+    def get_actor(self, actor) -> Actor:
+        """Returns Actor"""
+        raise NotImplementedError
+
+    @abc.abstractmethod
+    def add_director(self, director: Director):
+        """Adds a director to the repository"""
+        raise NotImplementedError
+
+    @abc.abstractmethod
+    def get_director(self, director) -> Director:
+        """Returns Director"""
         raise NotImplementedError
 
     @abc.abstractmethod
     def add_genre(self, genre: Genre):
         """Adds genre to repo"""
         raise NotImplementedError
-        
+
+    @abc.abstractmethod
+    def get_genre(self, genre) -> Genre:
+        raise NotImplementedError
+
+    @abc.abstractmethod
+    def add_review(self, review: Review):
+        """Adds a review to the repository"""
+        raise NotImplementedError
+
+    @abc.abstractmethod
+    def get_review(self, review) -> Review:
+        """Returns Review"""
+        raise NotImplementedError
+
+    @abc.abstractmethod
+    def add_watchlist(self, watchlist: Watchlist):
+        """Adds a watchlist to the repository"""
+        raise NotImplementedError
+
+    @abc.abstractmethod
+    def get_watchlist(self, watchlist) -> Watchlist:
+        """Returns Watchlist"""
+        raise NotImplementedError
+
+
+

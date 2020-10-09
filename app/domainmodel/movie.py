@@ -1,6 +1,6 @@
-from domainmodel.genre import Genre
-from domainmodel.actor import Actor
-from domainmodel.director import Director
+from app.domainmodel.genre import Genre
+from app.domainmodel.actor import Actor
+from app.domainmodel.director import Director
 from datetime import datetime
 import pytest
 
@@ -23,6 +23,7 @@ class Movie:
     __runtime_minutes: int
     __genres: list
     __description: str
+    __rank: int
 
     def __init__(self, title: str, release_year: int):
         self.__director = None
@@ -57,6 +58,15 @@ class Movie:
             self.__director = Director(new_director)
         else:
             self.__director = None
+
+    @property
+    def rank(self):
+        return self.__rank
+
+    @rank.setter
+    def rank(self, new_rank: int):
+        if isinstance(new_rank, int):
+            self.__rank = new_rank
 
     @property
     def description(self):
