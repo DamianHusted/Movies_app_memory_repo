@@ -1,8 +1,8 @@
 from datetime import datetime
 
-from app.domainmodel.movie import Movie
-from app.domainmodel.review import Review
-from werkzeug.security import generate_password_hash, check_password_hash
+from Movie_app.domainmodel.movie import Movie
+from werkzeug.security import generate_password_hash
+
 
 class User:
     __username: str

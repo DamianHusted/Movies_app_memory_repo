@@ -1,13 +1,11 @@
 import abc
-from datetime import date
-from app.domainmodel import *
-from app.domainmodel.actor import Actor
-from app.domainmodel.movie import Movie
-from app.domainmodel.director import Director
-from app.domainmodel.genre import Genre
-from app.domainmodel.review import Review
-from app.domainmodel.user import User
-from app.domainmodel.watchlist import Watchlist
+from Movie_app.domainmodel.actor import Actor
+from Movie_app.domainmodel.movie import Movie
+from Movie_app.domainmodel.director import Director
+from Movie_app.domainmodel.genre import Genre
+from Movie_app.domainmodel.review import Review
+from Movie_app.domainmodel.user import User
+from Movie_app.domainmodel.watchlist import Watchlist
 
 
 repo_instance = None
@@ -88,5 +86,32 @@ class AbstractRepository(abc.ABC):
         """Returns Watchlist"""
         raise NotImplementedError
 
+    @abc.abstractmethod
+    def get_number_of_movies(self) -> int:
+        """Returns the number of movies in the 'database/repo' """
+        raise NotImplementedError
 
+    @abc.abstractmethod
+    def get_number_of_directors(self) -> int:
+        """Returns the number of directors in the 'database/repo' """
+        raise NotImplementedError
 
+    @abc.abstractmethod
+    def get_number_of_actors(self) -> int:
+        """Returns the number of actors in the 'database/repo' """
+        raise NotImplementedError
+
+    @abc.abstractmethod
+    def get_number_of_genres(self) -> int:
+        """Returns the number of genres in the 'database/repo' """
+        raise NotImplementedError
+
+    @abc.abstractmethod
+    def get_number_of_reviews(self) -> int:
+        """Returns the number of reviews in the 'database/repo' """
+        raise NotImplementedError
+
+    @abc.abstractmethod
+    def get_number_of_watchlists(self) -> int:
+        """Returns the number of watchlists in the 'database/repo' """
+        raise NotImplementedError

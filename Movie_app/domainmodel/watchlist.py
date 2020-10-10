@@ -1,4 +1,4 @@
-from domainmodel.movie import Movie
+from Movie_app.domainmodel.movie import Movie
 from datetime import *
 
 

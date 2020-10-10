@@ -1,8 +1,5 @@
-from app.domainmodel.genre import Genre
-from app.domainmodel.actor import Actor
-from app.domainmodel.director import Director
-from datetime import datetime
-import pytest
+from Movie_app.domainmodel.actor import Actor
+from Movie_app.domainmodel.director import Director
 
 """
 Check all arguments and return types

@@ -1,5 +1,5 @@
-from app import app
 from flask import Flask, render_template, redirect, url_for, request
+from Movie_app.app import app
 
 @app.route("/")
 def index():
